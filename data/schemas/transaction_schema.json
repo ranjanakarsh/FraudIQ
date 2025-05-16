@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "Transaction",
+  "fields": [
+    {"name": "transaction_id", "type": "string"},
+    {"name": "user_id", "type": "string"},
+    {"name": "timestamp", "type": "long"},
+    {"name": "amount", "type": "double"},
+    {"name": "status", "type": "string"},
+    {"name": "source", "type": "string"},
+    {"name": "merchant", "type": "string"},
+    {"name": "card_type", "type": "string"},
+    {"name": "location", "type": ["null", "string"], "default": null},
+    {"name": "ip_address", "type": ["null", "string"], "default": null},
+    {"name": "device_id", "type": ["null", "string"], "default": null}
+  ]
+} 

@@ -1,0 +1,44 @@
+{
+  "topics": [
+    {
+      "name": "bank_transactions",
+      "partitions": 3,
+      "replication_factor": 1,
+      "config": {
+        "retention.ms": 604800000
+      }
+    },
+    {
+      "name": "gateway_transactions",
+      "partitions": 3,
+      "replication_factor": 1,
+      "config": {
+        "retention.ms": 604800000
+      }
+    },
+    {
+      "name": "processor_transactions",
+      "partitions": 3,
+      "replication_factor": 1,
+      "config": {
+        "retention.ms": 604800000
+      }
+    },
+    {
+      "name": "fraud_alerts",
+      "partitions": 1,
+      "replication_factor": 1,
+      "config": {
+        "retention.ms": 2592000000
+      }
+    },
+    {
+      "name": "reconciliation_results",
+      "partitions": 1,
+      "replication_factor": 1,
+      "config": {
+        "retention.ms": 2592000000
+      }
+    }
+  ]
+} 

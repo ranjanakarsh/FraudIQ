@@ -1,0 +1,38 @@
+[
+  {
+    "transaction_id": "txn-12345",
+    "user_id": "user-123",
+    "timestamp": 1747396000000,
+    "amount": 129.99,
+    "status": "completed",
+    "source": "web",
+    "location": "New York",
+    "card_type": "visa",
+    "ip_address": "192.168.1.1",
+    "device_id": "device-abc"
+  },
+  {
+    "transaction_id": "txn-12346",
+    "user_id": "user-123",
+    "timestamp": 1747396100000,
+    "amount": 49.99,
+    "status": "completed",
+    "source": "mobile",
+    "location": "New York",
+    "card_type": "visa",
+    "ip_address": "192.168.1.1",
+    "device_id": "device-abc"
+  },
+  {
+    "transaction_id": "txn-12347",
+    "user_id": "user-456",
+    "timestamp": 1747396200000,
+    "amount": 199.99,
+    "status": "failed",
+    "source": "web",
+    "location": "Chicago",
+    "card_type": "mastercard",
+    "ip_address": "192.168.2.2",
+    "device_id": "device-def"
+  }
+] 

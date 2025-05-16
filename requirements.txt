@@ -1,0 +1,31 @@
+# Kafka
+kafka-python==2.0.2
+confluent-kafka==2.1.0
+avro-python3==1.10.2
+
+# Flink
+apache-flink==1.17.0
+pyflink==1.17.0
+
+# Spark
+pyspark==3.4.0
+delta-spark==2.4.0
+hudi-spark==0.13.0
+
+# Airflow
+apache-airflow==2.6.3
+apache-airflow-providers-apache-spark==4.1.0
+
+# Data Generation/Processing
+faker==18.11.2
+pandas==2.0.3
+numpy==1.24.3
+pyarrow==12.0.1
+
+# Storage
+minio==7.1.15
+boto3==1.28.15
+
+# Utilities
+python-dotenv==1.0.0
+colorlog==6.7.0 
