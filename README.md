@@ -90,22 +90,32 @@ mvn dependency:get -Dartifact=org.apache.flink:flink-connector-kafka:1.17.1
 mvn dependency:get -Dartifact=org.apache.kafka:kafka-clients:3.4.0
 ```
 
-3. Start the services
+3. Generate secure keys and set up environment variables
+```bash
+# Generate a secure Fernet key for Airflow
+python utils/generate_fernet_key.py
+
+# Create a .env file with your secure keys
+cp .env.example .env
+# Edit the .env file with your generated Fernet key and other credentials
+```
+
+4. Start the services
 ```bash
 docker-compose up -d
 ```
 
-4. Access the Airflow UI
+5. Access the Airflow UI
    - URL: http://localhost:8080
    - Username: admin
    - Password: airflow
 
-5. Create S3 buckets in MinIO
+6. Create S3 buckets in MinIO
 ```bash
 python utils/upload_to_minio.py
 ```
 
-6. Generate and upload sample data
+7. Generate and upload sample data
 ```bash
 # Generate data
 python kafka/producer/generate_transactions.py --count 100
@@ -116,7 +126,7 @@ cat kafka/sample_data.json | docker exec -i fraudiq-kafka kafka-console-producer
 cat kafka/sample_data.json | docker exec -i fraudiq-kafka kafka-console-producer --broker-list localhost:9092 --topic processor_transactions
 ```
 
-7. Trigger Airflow DAGs
+8. Trigger Airflow DAGs
    - Open Airflow UI
    - Enable and trigger the `fraud_feature_extraction` DAG
    - Enable and trigger the `transaction_reconciliation` DAG
