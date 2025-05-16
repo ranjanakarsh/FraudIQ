@@ -104,7 +104,7 @@ Or
 ```bash
 python utils/generate_fernet_key.py
 ```
-and paste the generated key in docker_compose.yml
+and paste the generated key in docker-compose.yml in line 142 and 172
 ```yml
 AIRFLOW__CORE__FERNET_KEY=${AIRFLOW_FERNET_KEY}
 ```
