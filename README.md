@@ -259,3 +259,7 @@ docker exec -it fraudiq-spark-master spark-submit --version
 ## License
 
 MIT 
+
+## Contact
+
+Ranjan Akarsh - [Instagram](https://instagram.com/ranjanakarsh)
