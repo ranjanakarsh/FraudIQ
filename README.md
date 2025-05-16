@@ -100,6 +100,15 @@ cp .env.example .env
 # Edit the .env file with your generated Fernet key and other credentials
 ```
 
+Or
+```bash
+python utils/generate_fernet_key.py
+```
+and paste the generated key in docker_compose.yml
+```yml
+AIRFLOW__CORE__FERNET_KEY=${AIRFLOW_FERNET_KEY}
+```
+
 4. Start the services
 ```bash
 docker-compose up -d
